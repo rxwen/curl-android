@@ -75,6 +75,8 @@ LOCAL_CFLAGS += $(common_CFLAGS)
 
 LOCAL_COPY_HEADERS_TO := libcurl/curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
+LOCAL_COPY_HEADERS_TO := curl
+LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
 LOCAL_SHARED_LIBRARIES := libopenssl
 
 LOCAL_MODULE:= libcurl
@@ -91,6 +93,7 @@ $(LOCAL_PATH)/NOTICE: $(LOCAL_PATH)/COPYING | $(ACP)
 include $(BUILD_SHARED_LIBRARY)
 
 
+ifneq ($(TARGET_SIMULATOR),true)
 #########################
 # Build the curl binary
 
@@ -112,4 +115,4 @@ LOCAL_CFLAGS += $(common_CFLAGS)
 LOCAL_MODULE_TAGS := eng
 
 include $(BUILD_EXECUTABLE)
-
+endif
