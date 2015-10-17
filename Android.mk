@@ -78,7 +78,7 @@ LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
 LOCAL_SHARED_LIBRARIES := libopenssl
 
 LOCAL_MODULE:= libcurl
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := eng
 
 # Copy the licence to a place where Android will find it.
 # Actually, this doesn't quite work because the build system searches
@@ -108,6 +108,8 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include $(LOCAL_PATH)/lib $(LOCAL_PATH)/packag
 # This may also need to include $(CURLX_CFILES) in order to correctly link
 # if libcurl is changed to be built as a dynamic library
 LOCAL_CFLAGS += $(common_CFLAGS)
+
+LOCAL_MODULE_TAGS := eng
 
 include $(BUILD_EXECUTABLE)
 
