@@ -81,6 +81,7 @@ LOCAL_SHARED_LIBRARIES := libopenssl
 
 LOCAL_MODULE:= libcurl
 LOCAL_MODULE_TAGS := eng
+LOCAL_LDLIBS += -lrt
 
 # Copy the licence to a place where Android will find it.
 # Actually, this doesn't quite work because the build system searches
