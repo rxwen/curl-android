@@ -70,7 +70,12 @@ CURL_HEADERS := \
 	typecheck-gcc.h
 
 LOCAL_SRC_FILES := $(addprefix lib/,$(CSOURCES))
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/ $(LOCAL_PATH)/lib/ $(LOCAL_PATH)/packages/Android/ $(LOCAL_PATH)/../openssl/include/
+LOCAL_C_INCLUDES += \
+	$(LOCAL_PATH)/include/ \
+	$(LOCAL_PATH)/lib/ \
+	$(LOCAL_PATH)/packages/Android/ \
+	external/libjingle/third_party/openssl/openssl/include
+
 LOCAL_CFLAGS += $(common_CFLAGS)
 
 LOCAL_COPY_HEADERS_TO := libcurl/curl
