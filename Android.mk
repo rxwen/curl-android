@@ -82,7 +82,7 @@ LOCAL_COPY_HEADERS_TO := libcurl/curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
 LOCAL_COPY_HEADERS_TO := curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
-LOCAL_SHARED_LIBRARIES := libcrypto libopenssl
+LOCAL_SHARED_LIBRARIES := libcrypto libssl
 
 LOCAL_MODULE:= libcurl
 LOCAL_MODULE_TAGS := eng
