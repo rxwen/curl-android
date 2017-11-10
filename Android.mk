@@ -74,7 +74,7 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/include/ \
 	$(LOCAL_PATH)/lib/ \
 	$(LOCAL_PATH)/packages/Android/ \
-	external/libjingle/third_party/openssl/openssl/include
+	external/openssl/include
 
 LOCAL_CFLAGS += $(common_CFLAGS)
 
@@ -82,7 +82,7 @@ LOCAL_COPY_HEADERS_TO := libcurl/curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
 LOCAL_COPY_HEADERS_TO := curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
-LOCAL_SHARED_LIBRARIES := libopenssl
+LOCAL_SHARED_LIBRARIES := libcrypto libopenssl
 
 LOCAL_MODULE:= libcurl
 LOCAL_MODULE_TAGS := eng
